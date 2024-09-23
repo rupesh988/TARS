@@ -1,0 +1,94 @@
+2024-09-18 22:41:24.108346     rupesh_reddy1                     Hlo    
+2024-09-18 22:41:45.050980     rupesh_reddy1                     Screenshot    
+2024-09-18 22:41:58.756951     rupesh_reddy1                     Student 2200032068    
+2024-09-18 22:42:12.894286     rupesh_reddy1                     Student 2200030300    
+2024-09-18 22:42:28.230526     rupesh_reddy1                     Student 2200039051    
+2024-09-18 22:42:50.890091     rupesh_reddy1                     Student 2200032089    
+2024-09-18 22:58:44.416986     rupesh_reddy1                     Hlo    
+2024-09-18 23:04:37.123816     rupesh_reddy1                     Student 2200032067    
+2024-09-18 23:12:58.440083     rupesh_reddy1                     Hlo    
+2024-09-18 23:12:59.345775     Bhanu_prakash7665                     Hlo    
+2024-09-18 23:13:07.894964     Bhanu_prakash7665                     Shutdown    
+2024-09-18 23:13:14.869236     Bhanu_prakash7665                     Screenshot    
+2024-09-18 23:28:21.987129     rupesh_reddy1                     Hlo    
+2024-09-18 23:28:30.213578     rupesh_reddy1                     Student 4    
+2024-09-18 23:28:42.722074     rupesh_reddy1                     Student 2200039829    
+2024-09-18 23:28:54.773649     rupesh_reddy1                     Student 2200032743    
+2024-09-18 23:29:17.078772     rupesh_reddy1                     Screenshot    
+2024-09-18 23:29:55.326095     Bhanu_prakash7665                     Shutdown    
+2024-09-18 23:30:21.039978     Bhanu_prakash7665                     Screenshot    
+2024-09-18 23:30:38.534250     Bhanu_prakash7665                     Student 2200039028    
+2024-09-18 23:30:50.712328     Bhanu_prakash7665                     Shutdown    
+2024-09-19 19:27:36.127467     rupesh_reddy1                     topdf    
+2024-09-19 19:28:23.805221     rupesh_reddy1                     scrn    
+2024-09-19 19:28:56.166750     rupesh_reddy1                     student 2200039038    
+2024-09-19 19:29:44.339531     Bhanu_prakash7665                     Scrn    
+2024-09-19 19:29:57.138329     Bhanu_prakash7665                     scrn    
+2024-09-19 19:31:10.566943     Bhanu_prakash7665                     scrn    
+2024-09-19 19:32:03.906982     rupesh_reddy1                     Shutdown    
+2024-09-19 20:38:34.763563     rupesh_reddy1                     student 2200039030    
+2024-09-19 22:25:03.404522     rupesh_reddy1                     Hi    
+2024-09-19 22:36:59.264101     rupesh_reddy1                     Hi    
+2024-09-19 22:46:06.187145     rupesh_reddy1                     Student 2200032077    
+2024-09-19 22:46:10.854285     rupesh_reddy1                     Scrn    
+2024-09-19 22:48:18.413107     rupesh_reddy1                     Shutdown 60    
+2024-09-19 22:49:59.753262     rupesh_reddy1                     Shutdown 60    
+2024-09-19 22:59:27.360171     rupesh_reddy1                     Stop    
+2024-09-19 22:59:32.599547     rupesh_reddy1                     stop    
+2024-09-19 23:00:01.851103     rupesh_reddy1                     Stop    
+2024-09-19 23:00:49.748394     rupesh_reddy1                     Shutdown 30    
+2024-09-19 23:01:02.307492     rupesh_reddy1                     Stop    
+user tried to acces Bhanu_prakash7665    Bhanu  1208732350    
+user tried to acces Bhanu_prakash7665    Bhanu  1208732350    
+user tried to acces Bhanu_prakash7665    Bhanu  1208732350    
+2024-09-19 23:02:15.855115     rupesh_reddy1                     Stop    
+2024-09-19 23:06:52.860320     rupesh_reddy1                     Shutdown 20    
+2024-09-19 23:06:58.219961     rupesh_reddy1                     Hi    
+2024-09-20 08:26:19.014488     rupesh_reddy1                     Yo    
+2024-09-20 08:42:44.998493     rupesh_reddy1                     Plot kde weight studentage    
+2024-09-20 08:43:13.054496     rupesh_reddy1                     Plot kde weight studentage    
+2024-09-20 08:45:17.054627     rupesh_reddy1                     Plot area weight    
+2024-09-20 08:53:20.709696     rupesh_reddy1                     Plot hist order_id price    
+2024-09-20 09:16:46.685268     rupesh_reddy1                     Hlo    
+2024-09-20 09:16:55.889212     rupesh_reddy1                     Shutdown 1    
+2024-09-20 14:03:27.983652     rupesh_reddy1                     hlo    
+2024-09-20 14:07:18.448962     rupesh_reddy1                     shutdown 1    
+2024-09-20 14:09:33.172598     rupesh_reddy1                     hi    
+2024-09-20 14:09:44.682906     rupesh_reddy1                     screenshot    
+2024-09-20 14:10:02.062705     rupesh_reddy1                     Shutdown 60    
+2024-09-20 14:10:14.587870     rupesh_reddy1                     Stop    
+user tried to acces harikrishna99005    2200099005 _--Hari  1721067756  1721067756    
+2024-09-20 15:18:39.658745     rupesh_reddy1                     Screenshot    
+2024-09-20 15:19:06.093286     rupesh_reddy1                     Shutdown 10    
+2024-09-20 15:19:10.898814     rupesh_reddy1                     Stop    
+2024-09-20 15:19:20.293117     rupesh_reddy1                     Shutdown 10    
+user tried to acces Bhanu_prakash7665    Bhanu  1208732350  1208732350    
+2024-09-20 21:03:06.556495     rupesh_reddy1                     Scrn    
+2024-09-20 21:04:03.527670     rupesh_reddy1                     Scrn    
+2024-09-20 21:04:51.877992     rupesh_reddy1                     Sc    
+2024-09-20 21:04:57.726728     rupesh_reddy1                     Scrn    
+2024-09-20 21:53:36.416353     rupesh_reddy1                     Scrn    
+2024-09-20 21:53:36.457335     rupesh_reddy1                     Hlo    
+2024-09-20 21:54:02.595662     rupesh_reddy1                     Ha    
+2024-09-20 21:54:30.301499     rupesh_reddy1                     Screenshot    
+2024-09-20 22:02:13.569200     rupesh_reddy1                     Scrn    
+2024-09-20 22:03:21.150775     rupesh_reddy1                     Screenshot    
+2024-09-20 22:36:30.386076     rupesh_reddy1                     Hlo pilla    
+2024-09-20 22:36:41.007346     rupesh_reddy1                     Hlo pilla    
+2024-09-20 22:57:50.160853     rupesh_reddy1                     V    
+2024-09-20 22:57:55.036735     rupesh_reddy1                     Hi    
+2024-09-21 09:43:22.901450     rupesh_reddy1                     hlo    
+2024-09-21 09:43:59.483696     rupesh_reddy1                     Student 2200039074    
+2024-09-21 09:55:16.722926     rupesh_reddy1                     Hlo    
+2024-09-21 09:55:21.952413     rupesh_reddy1                     Screenshot    
+2024-09-21 09:55:54.080484     rupesh_reddy1                     Shutdown    
+2024-09-21 09:55:54.457076     rupesh_reddy1                     Shutdown 1    
+2024-09-21 14:46:38.182591     rupesh_reddy1                     Scrn    
+2024-09-21 14:55:06.821776     rupesh_reddy1                     Ji    
+2024-09-21 15:02:17.900971     rupesh_reddy1                     Hlo    
+2024-09-22 10:42:51.165637     rupesh_reddy1                     Hlo    
+2024-09-22 10:42:52.447877     rupesh_reddy1                     Hlo    
+2024-09-23 10:17:53.541535     rupesh_reddy1                     hello    
+2024-09-23 10:28:32.597992     rupesh_reddy1                     Shutdown    
+2024-09-23 10:30:41.265877     rupesh_reddy1                     Shutdown    
+2024-09-23 10:30:44.854480     rupesh_reddy1                     Stop    
