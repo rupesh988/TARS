@@ -3,6 +3,7 @@ import os
 from telegram import Update
 from PIL import ImageGrab
 import pandas as pd
+import psutil
 
 data = pd.read_csv("other_res/Book1.csv",encoding='ISO-8859-1')
 
@@ -58,6 +59,20 @@ def log_file(text : str):
     with open("logs.txt",'a') as file :
         file.write(f"{text}    \n")
 
+def system_info(update: Update,*args):
+    mes = update.message
+    d_usage = psutil.disk_usage("/").percent
+    ram = psutil.virtual_memory().percent
+    battery = psutil.sensors_battery()
+    b_percent = battery.percent if battery else None
+    cpu = psutil.cpu_percent(interval=1)
+    m = f"disk usage : {d_usage}%\nram : {ram}% \n battery : {b_percent}% \n cpu : {cpu}%"
+    mes.reply_text(m)
+def email(update : Update,*args):
+    receiver_email = args[1]
+    subject = args[2]
+    body = args[3]
+
 
 
 
@@ -68,6 +83,8 @@ commands = {
     'shutdown' : shutdown,
     'student' : student,
     'stop' : stop,
+    'system' : system_info,
+    'email' : email
 
 
 }

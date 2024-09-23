@@ -6,8 +6,8 @@ from datetime import datetime
 cmd = res_text.commands
 cmd_doc = res_doc.commands
 import os
-
-
+pid = os.getpid()
+print(f"pid is {pid}")
 #global values
 updater = None #for shutting down a bot in stop function
 # it is deined in stop and main function so that we canuse then globally without passing to function
@@ -37,10 +37,10 @@ def handle_doc(update : Update,context : CallbackContext) ->None:
     else:
         update.message.reply_text("oh shit, what i want to do with that crap 🤬 🤬 🤬..provide  some caption ")
 
-    
+   
 def handle_photo(update : Update,*args):
     photo = update.message.photo
-    # 
+    
     # 
     # pass some pic function dated 21 9 24
     # 
@@ -56,12 +56,16 @@ def handle_message(update: Update, context: CallbackContext) -> None:
 def start(update: Update,context: CallbackContext):
     update.message.reply_text("it's A T L A S here, how can i help you?")
 
-def stop(update: Update, context: CallbackContext) -> None:
+def destruct(update: Update, context: CallbackContext) -> None:
     update.message.reply_text("Self destructing... 💥")
     print(context.bot_data)
     global updater
+    global pid
     if updater:
-        updater.stop()
+        
+        print("Terminating the bot")
+        os.system(f"taskkill /pid {pid} /f")
+
         
 
 def main():
@@ -76,11 +80,11 @@ def main():
     dp.add_handler(MessageHandler(Filters.document,handle_doc))
     dp.add_handler(MessageHandler(Filters.photo,handle_photo))
     dp.add_handler(CommandHandler("start",start))
-    dp.add_handler(CommandHandler("stop",stop))
+    dp.add_handler(CommandHandler("destruct",destruct))
     #starting the bot
     updater.start_polling()
 
-    # ctrl + c to exit true
+    # ctrl + c to exit True
     updater.idle()
 
 if __name__ == '__main__':
