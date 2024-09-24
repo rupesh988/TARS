@@ -4,7 +4,7 @@ import res_text as res_text
 import res_doc as res_doc
 from datetime import datetime
 
-API_KEY =""7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw""
+API_KEY ="7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw"
 cmd = res_text.commands
 cmd_doc = res_doc.commands
 import os
