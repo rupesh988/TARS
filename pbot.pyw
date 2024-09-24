@@ -5,6 +5,8 @@ import res_doc as res_doc
 from datetime import datetime
 
 API_KEY ="7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw"
+OWNER_USERID="rupesh_reddy1"
+
 cmd = res_text.commands
 cmd_doc = res_doc.commands
 import os
@@ -39,7 +41,8 @@ def handle_doc(update : Update,context : CallbackContext) ->None:
     
     cap = caption.split()
     res_text.log_file(f" document {datetime.now()}     {mes.from_user.username}                     {' '.join(cap)}")
-    if(mes.from_user.username != "rupesh_reddy1"):
+    if(mes.from_user.username != OWNER_USERID
+    ):
         mes.reply_text("Yo who the fu*k ?")
         return
     m = cap[0].strip().lower()
@@ -59,7 +62,7 @@ def handle_photo(update : Update,*args):
 
 
 def handle_message(update: Update, context: CallbackContext) -> None:
-    if update.message.from_user.username == "rupesh_reddy1":
+    if update.message.from_user.username == OWNER_USERID:
         handle_txt(update,context)
     else:
         update.message.reply_text("only lord have access 😏😏😏😏  😏 😏 - A T L A S")
@@ -69,7 +72,8 @@ def start(update: Update,context: CallbackContext):
     update.message.reply_text("it's A T L A S here, how can i help you?")
 
 def destruct(update: Update, context: CallbackContext) -> None:
-    if(update.message.from_user.username != "rupesh_reddy1"):
+    if(update.message.from_user.username != OWNER_USERID
+    ):
         update.message.reply_text("you havent got access")
         return
     update.message.reply_text("Self destructing... 💥")

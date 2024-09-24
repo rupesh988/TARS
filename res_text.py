@@ -4,7 +4,7 @@ from telegram import Update
 from PIL import ImageGrab
 import pandas as pd
 import psutil
-
+USERID = 'rupesh_reddy1'
 data = pd.read_csv("other_res/Book1.csv",encoding='ISO-8859-1')
 
 
@@ -28,7 +28,7 @@ def student(update: Update, pin : str='220003', *args):
 
 def screenshot(update : Update, *args) -> str:
     mes = update.message
-    if not(mes.from_user.username == "rupesh_reddy1"):
+    if not(mes.from_user.username == USERID):
         return "only lord have access 😏😏😏😏  😏 😏"
     image = ImageGrab.grab()
     image.save("other_res/scrn.jpg","JPEG",quality = 100)
@@ -39,7 +39,7 @@ def screenshot(update : Update, *args) -> str:
 
 def shutdown(update: Update, *args) -> str:
     mes = update.message
-    if not(mes.from_user.username == "rupesh_reddy1"):
+    if not(mes.from_user.username == USERID):
         return "only lord have access 😏😏😏😏  😏 😏"
     try:
         if(len(args)>0):
