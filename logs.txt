@@ -102,3 +102,5 @@ user tried to acces Bhanu_prakash7665    Bhanu  1208732350  1208732350
 2024-09-23 14:26:10.571015     rupesh_reddy1                     systeM    
 2024-09-23 14:33:20.247002     rupesh_reddy1                     system    
 2024-09-23 14:33:31.220606     rupesh_reddy1                     scrn    
+2024-09-24 12:10:29.350161     rupesh_reddy1                     hlo    
+2024-09-24 12:10:30.532462     rupesh_reddy1                     hlo    

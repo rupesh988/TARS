@@ -3,6 +3,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import res_text as res_text
 import res_doc as res_doc
 from datetime import datetime
+
+API_KEY =""7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw""
 cmd = res_text.commands
 cmd_doc = res_doc.commands
 import os
@@ -13,6 +15,7 @@ updater = None #for shutting down a bot in stop function
 # it is deined in stop and main function so that we canuse then globally without passing to function
 def handle_txt(update : Update, context: CallbackContext) ->None:
     mes = update.message
+    print(mes.from_user.id)
     
     msg = mes.text.split()
     res_text.log_file(f"{datetime.now()}     {mes.from_user.username}                     {' '.join(msg)}")
@@ -82,7 +85,7 @@ def destruct(update: Update, context: CallbackContext) -> None:
 
 def main():
     global updater
-    updater = Updater("7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw")
+    updater = Updater(API_KEY)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
