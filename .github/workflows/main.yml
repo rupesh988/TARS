@@ -1,4 +1,4 @@
-name: Telegram Notification on Push
+name: Notify Telegram on Commit
 
 on:
   push:
@@ -8,10 +8,22 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Send Telegram message
-      run: |
-        curl -X POST "https://api.telegram.org/bot7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw/sendMessage" \
-        -d "chat_id=" 5373052358 \
-        -d "text=New push to repository: ${{ github.repository }} by ${{ github.actor }} on branch ${{ github.ref }}"
+      - name: Send Telegram Notification
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const axios = require('axios');
+
+            const telegramToken = '${{ secrets.TELEGRAM_BOT_TOKEN }}';
+            const chatId = '${{ secrets.CHAT_ID }}';
+            const repository = context.repo.full_name;
+            const pusher = context.payload.pusher.name;
+            const commitMessage = context.payload.head_commit.message;
+
+            const message = `New commit on ${repository} by ${pusher}: ${commitMessage}`;
+
+            await axios.post(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+              chat_id: chatId,
+              text: message,
+            });
