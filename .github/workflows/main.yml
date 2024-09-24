@@ -10,20 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Telegram Notification
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const axios = require('axios');
+        run: |
+          telegramToken="${{ secrets.TELEGRAM_BOT_TOKEN }}"
+          chatId="${{ secrets.CHAT_ID }}"
+          repository="${{ github.repository }}"
+          pusher="${{ github.actor }}"
+          commitMessage="${{ github.event.head_commit.message }}"
 
-            const telegramToken = '${{ secrets.TELEGRAM_BOT_TOKEN }}';
-            const chatId = '${{ secrets.CHAT_ID }}';
-            const repository = context.repo.full_name;
-            const pusher = context.payload.pusher.name;
-            const commitMessage = context.payload.head_commit.message;
+          message="New commit on ${repository} by ${pusher}: ${commitMessage}"
 
-            const message = `New commit on ${repository} by ${pusher}: ${commitMessage}`;
-
-            await axios.post(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-              chat_id: chatId,
-              text: message,
-            });
+          curl -s -X POST "https://api.telegram.org/bot${telegramToken}/sendMessage" \
+            -d "chat_id=${chatId}" \
+            -d "text=${message}"
