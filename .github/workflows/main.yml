@@ -17,7 +17,7 @@ jobs:
           pusher="${{ github.actor }}"
           commitMessage="${{ github.event.head_commit.message }}"
 
-          message="New commit on ${repository} by ${pusher}: ${commitMessage}"
+          message="New commit on ${repository}     by ${pusher}:    ${commitMessage}"
 
           curl -s -X POST "https://api.telegram.org/bot${telegramToken}/sendMessage" \
             -d "chat_id=${chatId}" \

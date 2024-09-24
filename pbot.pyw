@@ -3,8 +3,9 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import res_text as res_text
 import res_doc as res_doc
 from datetime import datetime
+import os
 
-API_KEY ="7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw"
+API_KEY = os.getenv("ATLAS_BOT")
 OWNER_USERID="rupesh_reddy1"
 #Testing new workflow
 
