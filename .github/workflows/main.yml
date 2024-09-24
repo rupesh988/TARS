@@ -1,0 +1,17 @@
+name: Telegram Notification on Push
+
+on:
+  push:
+    branches:
+      - master  # Change this to the branch you want to monitor
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send Telegram message
+      run: |
+        curl -X POST "https://api.telegram.org/bot7227079555:AAGHqE2KpezLxpXdEN6uH1DlwyL5TTidscw/sendMessage" \
+        -d "chat_id=" 5373052358 \
+        -d "text=New push to repository: ${{ github.repository }} by ${{ github.actor }} on branch ${{ github.ref }}"
