@@ -4,8 +4,11 @@ import res_text as res_text
 import res_doc as res_doc
 from datetime import datetime
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 API_KEY = os.getenv("ATLAS_BOT")
+print(API_KEY)
 OWNER_USERID="rupesh_reddy1"
 #Testing new workflow
 
