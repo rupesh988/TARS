@@ -10,6 +10,7 @@ data = pd.read_csv("other_res/Book1.csv",encoding='ISO-8859-1')
 
 
 def student(update: Update, pin : str='220003', *args):
+    mes = update.message
     match = data[data['REGD.NO'] == pin]
     print(match)
 
@@ -17,7 +18,7 @@ def student(update: Update, pin : str='220003', *args):
         row = match.iloc[0]
         val = row[1:6]
         res = '   \n'.join(str(value) for value in val)
-        update.message.reply_text(res)
+        mes.reply_text(res)
         return None
     else:
         return "Sorry the applicant not found 😭/ wwrong format 😩😩😩😩 "
@@ -26,17 +27,19 @@ def student(update: Update, pin : str='220003', *args):
 
 
 def screenshot(update : Update, *args) -> str:
-    if not(update.message.from_user.username == "rupesh_reddy1"):
+    mes = update.message
+    if not(mes.from_user.username == "rupesh_reddy1"):
         return "only lord have access 😏😏😏😏  😏 😏"
     image = ImageGrab.grab()
     image.save("other_res/scrn.jpg","JPEG",quality = 100)
     with open("other_res/scrn.jpg",'rb') as pic:
-        update.message.reply_photo(pic)
+        mes.reply_photo(pic)
     os.remove('other_res/scrn.jpg')
     return 
 
 def shutdown(update: Update, *args) -> str:
-    if not(update.message.from_user.username == "rupesh_reddy1"):
+    mes = update.message
+    if not(mes.from_user.username == "rupesh_reddy1"):
         return "only lord have access 😏😏😏😏  😏 😏"
     try:
         if(len(args)>0):
@@ -52,8 +55,9 @@ def shutdown(update: Update, *args) -> str:
         return f"Error :  {e}"
     
 def stop(update: Update,*args):
+    mes = update.message
     os.system("shutdown /a")
-    update.message.reply_text("Shutdown stopped - A T L A S")
+    mes.reply_text("Shutdown stopped - A T L A S")
     
 def log_file(text : str):
     with open("logs.txt",'a') as file :

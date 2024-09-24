@@ -9,7 +9,8 @@ import time
 
 
 def topdf(update : Update, *args):
-    doc = update.message.document
+    mes = update.message
+    doc = mes.document
     
     file = doc.get_file()
     id = doc.file_id
@@ -27,17 +28,17 @@ def topdf(update : Update, *args):
         image.save("other_res/docs/"+name1,"PDF",resolution=100.0)
 
         with open(f"other_res/docs/{name1}",'rb') as img_file:
-            update.message.reply_document(img_file)
+            mes.reply_document(img_file)
         os.remove(f"other_res/docs/{name1}")
         os.remove(f_path)
 
 
     else:
-        update.message.reply_text("Damn i cant convert it imao ☠")
+        mes.reply_text("Damn i cant convert it imao ☠")
 
 def plot(update : Update, plot_type : str, *args):
-    
-    doc = update.message.document
+    mes = update.message
+    doc = mes.document
     file = doc.get_file()
     fileName = doc.file_name
     fileId = doc.file_id
@@ -49,7 +50,7 @@ def plot(update : Update, plot_type : str, *args):
         if plot_type == "head" :
             col_z = df.columns
             col_z = "  ".join(col_z)
-            update.message.reply_text(col_z)
+            mes.reply_text(col_z)
             
             return
         colToPlot = [c for c in args]
@@ -66,7 +67,7 @@ def plot(update : Update, plot_type : str, *args):
         
 
     except Exception as e:
-        update.message.reply_text(f"Exception : {e}")
+        mes.reply_text(f"Exception : {e}")
     except KeyboardInterrupt:
         print("Process interopted ")
     finally:

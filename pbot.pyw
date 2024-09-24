@@ -12,8 +12,11 @@ print(f"pid is {pid}")
 updater = None #for shutting down a bot in stop function
 # it is deined in stop and main function so that we canuse then globally without passing to function
 def handle_txt(update : Update, context: CallbackContext) ->None:
-    msg = update.message.text.split()
-    res_text.log_file(f"{datetime.now()}     {update.message.from_user.username}                     {' '.join(msg)}")
+    mes = update.message
+    
+    msg = mes.text.split()
+    res_text.log_file(f"{datetime.now()}     {mes.from_user.username}                     {' '.join(msg)}")
+    
     m = msg[0].strip().lower()
     print(m)
     msg[0] = update
@@ -24,12 +27,18 @@ def handle_txt(update : Update, context: CallbackContext) ->None:
         else:
             pass
     else:
-        update.message.reply_text("yo 🤖 🤖! master its a invalid command, teach me that first")
+        mes.reply_text("yo 🤖 🤖! master its a invalid command, teach me that first")
 
 def handle_doc(update : Update,context : CallbackContext) ->None:
+    mes = update.message
     print(update.message.document.mime_type)
     caption = update.message.caption if update.message.caption else "a b c"
+    
     cap = caption.split()
+    res_text.log_file(f" document {datetime.now()}     {mes.from_user.username}                     {' '.join(cap)}")
+    if(mes.from_user.username != "rupesh_reddy1"):
+        mes.reply_text("Yo who the fu*k ?")
+        return
     m = cap[0].strip().lower()
     cap[0]=update
     if m in cmd_doc:
@@ -57,6 +66,9 @@ def start(update: Update,context: CallbackContext):
     update.message.reply_text("it's A T L A S here, how can i help you?")
 
 def destruct(update: Update, context: CallbackContext) -> None:
+    if(update.message.from_user.username != "rupesh_reddy1"):
+        update.message.reply_text("you havent got access")
+        return
     update.message.reply_text("Self destructing... 💥")
     print(context.bot_data)
     global updater
