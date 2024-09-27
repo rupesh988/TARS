@@ -2,7 +2,7 @@ from .commands import *
 load_dotenv()
 BOT_TOKEN = os.getenv("ATLAS_BOT")
 def handle_message(update: Update,context: CallbackContext):
-    system_info(update)
+    screenshot(update)
 
 def main():
     updater = Updater(BOT_TOKEN)
