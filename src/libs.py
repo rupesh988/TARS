@@ -4,3 +4,4 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 from dotenv import load_dotenv
 import os
 import psutil
+from PIL import ImageGrab
