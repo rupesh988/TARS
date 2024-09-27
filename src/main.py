@@ -1,9 +1,8 @@
 from .commands import *
 load_dotenv()
 BOT_TOKEN = os.getenv("ATLAS_BOT")
-
 def handle_message(update: Update,context: CallbackContext):
-    update.message.reply_text("wt man i am new you know")
+    system_info(update)
 
 def main():
     updater = Updater(BOT_TOKEN)
