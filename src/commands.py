@@ -2,7 +2,7 @@ from .libs import *
 
 
 #for shutdowning the system in time seconds
-def shutdown(update: Update,time : str = '5',*args):
+def shutdown(update: Update,time : str = '5',*args) -> None:
     mes = update.message
     if(time == "stop"):
         os.system("shutdown /a")
@@ -30,7 +30,7 @@ def system_info(update: Update,*args):
     
 
 
-commands ={
+commands_list ={
     "shutdown" : shutdown,
     "system" : system_info,
 
