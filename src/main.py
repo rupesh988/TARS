@@ -1,9 +1,10 @@
 from .commands import *
 load_dotenv()
 BOT_TOKEN = os.getenv("ATLAS_BOT")
+USERNAME = os.getenv("USER")
 def handle_message(update: Update,context: CallbackContext) -> None:
     mes = update.message
-    if (mes.from_user.username != "rupesh_reddy1"):
+    if (mes.from_user.username != USERNAME):
         mes.reply_text("No access")
         return
     cmds = mes.text.split() #split msg into list
