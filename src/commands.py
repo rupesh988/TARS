@@ -41,7 +41,7 @@ def screenshot(update: Update,*args)-> None:
     
 
 
-commands ={
+commands_list ={
     "shutdown" : shutdown,
     "system" : system_info,
     "scrn": screenshot,
