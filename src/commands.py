@@ -16,7 +16,7 @@ def shutdown(update: Update,time : str = '5',*args) -> None:
         mes.reply_text(f"can't shutdown the system \n Reason : {e}")
         
 
-def system_info(update: Update,*args):
+def system_info(update: Update,*args)-> None:
     mes = update.message
     sys_info = ""
     disk = psutil.disk_usage('/').percent
@@ -26,6 +26,17 @@ def system_info(update: Update,*args):
     cpu = psutil.cpu_percent(interval=1)
     sys_info = f" disk : {disk}% \n ram : {ram}% \n cpu : {cpu}% \n power : {battery}%"
     mes.reply_text(sys_info)
+    return
+
+def screenshot(update: Update,*args)-> None:
+    mes = update.message
+    screen = ImageGrab.grab()
+    screen.save(os.path.join("src/temp/img","scrn.jpg"),format="JPEG")
+    with open("src/temp/img/scrn.jpg",'rb') as img:
+        mes.reply_photo(img)
+    os.remove("src/temp/img/scrn.jpg")
+    return
+    
 
     
 
@@ -33,5 +44,8 @@ def system_info(update: Update,*args):
 commands_list ={
     "shutdown" : shutdown,
     "system" : system_info,
+    "scrn": screenshot,
+    "screenshot" : screenshot,
+
 
 }
