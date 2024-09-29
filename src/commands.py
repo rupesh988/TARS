@@ -31,10 +31,10 @@ def system_info(update: Update,*args)-> None:
 def screenshot(update: Update,*args)-> None:
     mes = update.message
     screen = ImageGrab.grab()
-    screen.save(os.path.join("src/temp/img","scrn.jpg"),format="JPEG")
-    with open("src/temp/img/scrn.jpg",'rb') as img:
+    screen.save(os.path.join("src/temp/images","scrn.jpg"),format="JPEG")
+    with open("src/temp/images/scrn.jpg",'rb') as img:
         mes.reply_photo(img)
-    os.remove("src/temp/img/scrn.jpg")
+    os.remove("src/temp/images/scrn.jpg")
     return
     
 
