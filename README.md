@@ -1,2 +1,2 @@
-A T L A S , inspired by TARS from INTERSTELLAR
+T A R S , inspired  from INTERSTELLAR
 .
